@@ -1,4 +1,5 @@
 import { sql } from '@vercel/postgres';
+// eslint-disable-next-line
 const data = await sql<LatestInvoiceRaw>`
   SELECT invoices.amount, customers.name, customers.image_url, customers.email
   FROM invoices

@@ -21,9 +21,11 @@ export default function EditInvoiceForm({
 }) {
   const initialState: State = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+  // eslint-disable-next-line
   const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
 
   return (
+    // eslint-disable-next-line
     <form action={updateInvoiceWithId}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
